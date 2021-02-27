@@ -8,8 +8,8 @@ namespace InterviewCodingPractice
 {
     class SampleArray
     {
-        /// <Problem-No: 1>
-        /// ----------------
+        /// <Problem-No: 1. Maximum Area of a contianer>
+        /// ------------------------------------------------
         /// <ProblemGiven>
         /// 1. Given an array of positive integer where each integer represents the height of vertical line on a chart.
         /// 2. Find two lines which together with x axis forms a container that would hold the greatest amount of water. 
@@ -44,7 +44,7 @@ namespace InterviewCodingPractice
             Console.WriteLine("Maximmum area = {0} ", MaxArea);
         }
 
-        /// <Problem-No: 2>
+        /// <Problem-No: 2. Return the indices of the 2 integers which makes the sum of a given Target>
         /// <ProblemGiven>
         /// 1. Given array of integers, return the array of two numbers that add up to a given target.
         /// </ProblemGiven>
@@ -69,7 +69,7 @@ namespace InterviewCodingPractice
             }
         }
 
-        /// <Problem-No: 3>
+        /// <Problem-No: 3. Trapping Rainwater>
         /// <ProblemGiven>
         /// 
         /// </ProblemGiven>
