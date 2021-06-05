@@ -8,6 +8,7 @@ namespace InterviewCodingPractice
 {
     class SampleArray
     {
+        #region "Integer Array"
         /// <Problem-No: 1. Maximum Area of a contianer>
         /// ------------------------------------------------
         /// <ProblemGiven>
@@ -15,6 +16,18 @@ namespace InterviewCodingPractice
         /// 2. Find two lines which together with x axis forms a container that would hold the greatest amount of water. 
         /// 3. Return the area of water it would hold
         /// </ProblemGiven>
+        /// 
+        ///     Y Axis
+        ///     |
+        ///     |
+        ///     |
+        ///     |
+        ///     |
+        ///     |        |
+        ///     |        |         |
+        ///     |        |    |    |
+        ///     |   |    |    |    |
+        ///     |---|----|----|----|----------------------> X Axis
         /// 
         /// <Analysis>
         /// 1. Area = length * width
@@ -34,7 +47,7 @@ namespace InterviewCodingPractice
                 {
                     int length = Math.Min(arr[i], arr[j]);
                     int width = j - i; // Math.Abs(i - j);
-                    if(MaxArea < length * width)
+                    if (MaxArea < length * width)
                     {
                         MaxArea = length * width;
                     }
@@ -61,7 +74,7 @@ namespace InterviewCodingPractice
             {
                 for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if(target == arr[i] + arr[j])
+                    if (target == arr[i] + arr[j])
                     {
                         Console.WriteLine("Target {0} can be retrieved by adding values({1},{2}) at {3} and {4}", target, arr[i], arr[j], i, j);
                     }
@@ -76,10 +89,52 @@ namespace InterviewCodingPractice
         /// 
         /// </summary>
         /// <returns></returns>
-
+        /// 
         private int[] GetArrayofNumbers()
         {
             return new int[5] { 9, 1, 3, 6, 7 };
         }
+        #endregion
+
     }
+    #region "Armstrong Number"
+    public class ArmStrongNumber
+    {
+        public void CheckForArmStrongNumber(int givenNumber)
+        {
+            int quotient = givenNumber;
+            int remainder;
+            int result = 0;
+
+            do
+            {
+                remainder = quotient % 10; //3 - 5
+                result = result + (remainder * remainder * remainder);
+                quotient = quotient / 10; //15 -  1
+
+            } while (quotient > 0);
+            if (result == givenNumber)
+                Console.Write($"Given number {givenNumber} is an ARMSTRONG number");
+        }
+
+        public void CheckArmStrongNumberWithString(int givenNumber)
+        {
+            string numberInString = Convert.ToString(givenNumber);
+            int[] givenIntArry = new int[numberInString.Length];
+            char[] givenCharArry = numberInString.ToCharArray();
+
+            int result = 0;
+
+            for (int i = 0; i < givenCharArry.Length; i++)
+            {
+                result = result + (givenCharArry[i] * givenCharArry[i] * givenCharArry[i]);
+            }
+
+            if (result == givenNumber)
+                Console.WriteLine("ARMSTRONG");
+            else
+                Console.WriteLine("NO ArmStrong");
+        }
+    }
+    #endregion
 }

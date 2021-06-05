@@ -17,7 +17,12 @@ namespace InterviewCodingPractice
             //sampleArray.SolutionForProblemOne();
 
             //Problem two
-            sampleArray.SolutionForProblemTwo(4);
+            //sampleArray.SolutionForProblemTwo(4);
+
+            //Problem three
+            ArmStrongNumber obj = new ArmStrongNumber();
+            int number = Convert.ToInt32(Console.ReadLine());
+            obj.CheckArmStrongNumberWithString(number);
 
             #endregion
 
@@ -25,4 +30,6 @@ namespace InterviewCodingPractice
         }
 
     }
+
+    
 }
